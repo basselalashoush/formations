@@ -7,4 +7,3 @@ define('BASE_URL', dirname(dirname($_SERVER['SCRIPT_NAME'])));
 
 require_once CORE . DS . 'includes.php';
 new Dispatcher();
-echo "this is the webroot folder";
