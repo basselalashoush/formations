@@ -1,8 +1,9 @@
-<div class="profil">
-    <div class="profil-header">
-        Welcome <?= strtoupper($student->nom) ?> <?= $student->prenom ?>
-    </div>
-    <div class="profil-body">
-        <p><?= $student->nom ?></p>
-    </div>
+<?php $title = "profile"; ?>
+
+<div class="hero-unit">
+    <h1> Welcome <?= strtoupper($student->nom) ?> <?= $student->prenom ?></h1>
+</div>
+<div class="profile-body">
+    <p><?= $student->nom ?></p>
+
 </div>
