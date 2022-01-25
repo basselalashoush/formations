@@ -1,9 +1,18 @@
 <?php
 
+/**
+ * Dispatcher
+ * permet de charger le controller en fonction de la req$ete utilisateur
+ */
 class Dispatcher
 {
 
-    private $request;
+    private $request; //objet request 
+
+    /**
+     * function principal du dispatcher
+     * charge le controller en fonction du routing
+     */
     function __construct()
     {
         $this->request = new Request();
@@ -15,7 +24,9 @@ class Dispatcher
         call_user_func_array(array($controller, $this->request->action), $this->request->params);
         $controller->render($this->request->action);
     }
-
+    /**
+     * permet de charger le controller en fonction de la requête utilisateur
+     */
     function loadController()
     {
         $controllerName = ucfirst($this->request->controller) . 'Controller';
@@ -26,13 +37,12 @@ class Dispatcher
         require $file;
         return new $controllerName($this->request);
     }
-
+    /**
+     * permet de générer une page d'erreur en cas de problem au niveau du routing (page inexistante)
+     */
     public function error($message)
     {
-        header("HTTP/1.0 404 Not Found");
         $controller = new Controller($this->request);
-        $controller->set('message', $message);
-        $controller->render('/errors/404');
-        die();
+        $controller->e404($message);
     }
 }

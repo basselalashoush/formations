@@ -5,11 +5,11 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title><?php echo isset($title_for_layout) ? $title_for_layout : 'Mon Site'; ?></title>
     <link rel="stylesheet" href="http://bootstrapdocs.com/v2.3.2/docs/assets/css/bootstrap.css">
-    <link rel="stylesheet" href="http://localhost/site_web/webroot/css/style.css">
+    <link rel="stylesheet" href="<?= BASE_URL; ?>/css/app.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="contents">
         <?= $contents; ?>
 
     </div>

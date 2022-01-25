@@ -1,4 +1,8 @@
-<div class="hero-unit">
-    <h1>welcomm to the home bage</h1>
+<div class="profil">
+    <div class="profil-header">
+        Welcome <?= strtoupper($student->nom) ?> <?= $student->prenom ?>
+    </div>
+    <div class="profil-body">
+        <p><?= $student->nom ?></p>
+    </div>
 </div>
-<p><?= $text; ?></p>

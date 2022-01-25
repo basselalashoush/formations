@@ -1,0 +1,19 @@
+.contents {}
+
+.profil {
+    padding: 30px;
+}
+
+.profil-header {
+    padding: 40px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 30px;
+    text-align: center;
+    color: inherit;
+    background-color: #eeeeee;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
